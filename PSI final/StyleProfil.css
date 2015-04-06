@@ -1,0 +1,542 @@
+html{
+	background-image: url(img/Fond2.png), url(img/Bois-free-3.png);
+	background-position: center center, center center;
+	background-attachment: fixed, fixed;
+	background-repeat: no-repeat, repeat;
+
+}
+
+body {
+	width: 1000px;
+	margin: auto;
+	color: #ffffff;
+    }
+    
+#corps{
+	background: #f7f5f1;
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin-top: 0px;
+	position: relative;
+	height: 1547px;
+}
+    
+    	/********** MENU ***********/
+			
+header{
+	background: url(img/Bandeau_hote.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 1000px;
+	height: 320px;
+}
+			
+#menu {
+	display: inline-block;
+	text-align: center;
+    width : 1000px;
+    height: 55px;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0;
+ 
+    background-color: #4b4d4c;
+
+}
+
+#menu li { 
+	display: inline-block; 
+    list-style: none;
+}
+
+#menu li.bordG {
+	float: left;
+	padding-left: 5px;
+	padding-right:5px;
+}
+
+#menu li.bordD {
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#menu li a{
+	font-family:"Lucida Handwriting";
+	font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 18px 20px 18px 20px;
+    
+}
+
+#menu input[type="search"]{
+    text-align: center;
+    color: #000000;
+    margin: 18px;
+    -webkit-appearance:textfield;
+	box-sizing: content-box;
+}
+
+#menu li.bordG:hover, 
+#menu li.bordG:focus{
+    background: rgba(75,77,76,.2);
+}
+
+#menu li.bordG:active{
+    background: rgb(197, 204, 60);
+    color: #000000; 
+}
+
+#menu li.bordG a:active{
+    color: #000000; 
+}
+
+#menu li.bordD a:hover, 
+#menu li.bordD a:focus{
+    background: rgba(75,77,76,.2);
+}
+
+#menu li.bordD a:active{
+    background: rgb(197, 204, 60);
+    color: #000000;
+}
+ /* sous-menu*/
+#menu li:hover > ul{
+		    display: block;
+}
+ 
+ #menu ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+#menu ul li{
+	margin: 0;
+	list-style: none;
+	background-color: rgba(75,77,76,.7);
+	cursor:  pointer;
+	border:none;
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/*fin sous-menu*/
+
+#logo {
+	position: absolute;
+	z-index: 1;
+	left: 38%;
+	top: 0px;
+}
+
+
+#fade { /*--Masque opaque noir de fond--*/
+	display: none; /*--masqué par défaut--*/
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .80;
+	z-index: 9999;
+}
+.popup_block{
+	display: none; /*--masqué par défaut--*/
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ddd;
+	text-align: center;
+	color: #000000;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	/*--Les différentes définitions de Box Shadow en CSS3--*/
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	/*--Coins arrondis en CSS3--*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+img.btn_close {
+	float: right;
+	margin: -55px -55px 0 0;
+}
+/*--Gérer la position fixed pour IE6--*/
+*html #fade {
+position: absolute;
+}
+*html .popup_block {
+position: absolute;
+}
+
+table{
+margin: 0 auto;
+}
+
+#formulaire{
+	font-size: 18px;
+	font-family: "Times New Roman";
+	margin: 30px;
+}
+
+#formulaire caption, #formulaire p{
+	margin-bottom: 10px;
+}
+
+#formulaire select{
+	margin-top: 0px;
+}
+
+#submit{
+	cursor:  pointer;
+	border:none;
+    text-align:center;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    color:#ffffff;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 8px;
+    width:100px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(208, 87, 0);
+}
+
+#submit:hover, 
+#submit:focus{
+    background: rgba(208, 87, 0, 0.8);
+    color: #000000;
+}
+
+
+
+		/*****MENU 2*****/
+		
+		
+		
+#navigationMenu{
+	position: absolute;
+	margin-top: 15px;
+	z-index: 999;
+}	
+
+		
+#navigationMenu li{
+	list-style:none;
+	height:80px;
+	padding:2px;
+	width:80px;
+}
+
+#navigationMenu span{
+	/* Container properties */
+	width:0;
+	left:80px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:80px;
+	
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#navigationMenu a{
+	/*background:url('img/navigation2.png') no-repeat;*/
+
+	height:80px;
+	width:80px;
+	display:block;
+	position:relative;
+}
+
+/* General hover styles */
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+	text-decoration:none;
+	
+	/* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+
+#navigationMenu .home {	
+background-position:0 0; 
+background-image: url("img/ongletProfil.png");
+}
+#navigationMenu .home:hover {	background-position:0 -80px;}
+#navigationMenu .home span{
+	background-color:#7da315;
+	color:#3d4f0c;
+	text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+
+#navigationMenu .about { 
+background-position:-80px 0; 
+background-image: url("img/ongletRecettes.png");
+}
+#navigationMenu .about:hover { background-position:-80px -80px;}
+#navigationMenu .about span{
+	background-color:#1e8bb4;
+	color:#223a44;
+	text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+
+#navigationMenu .services { 
+background-position:-160px 0; 
+background-image: url("img/ongletRepas.png");
+}
+#navigationMenu .services:hover { background-position:-160px -80px;}
+#navigationMenu .services span{
+	background-color:#c86c1f;
+	color:#5a3517;
+	text-shadow:1px 1px 0 #d28344;
+}
+
+		/*********FIN MENU 2**********/
+
+		
+		
+		/****************POPUP******************/
+
+#modif_profil {
+	border:none;
+    font-size: 16px;
+    display: inline-block;
+}
+		
+
+#popup_modif{
+	z-index: 10;
+	position: absolute;
+	margin-left: 859px;
+	padding: 10px;
+	text-align: center;
+	font-family: "Times New Roman";
+    color:#000;
+    font-weight: bold;
+	border-radius: 5px;
+	margin-top: 17px;
+	text-decoration: none;
+	background: -webkit-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60)); 
+    background: -moz-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+    background: -ms-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+    background: -o-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+}
+
+#popup_modif:hover, 
+#popup_modif:focus{
+    color: #000;
+    background: -webkit-linear-gradient(rgb(210, 224, 130), rgb(197, 204, 100)); 
+    background: -moz-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+    background: -ms-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+    background: -o-linear-gradient(rgb(210, 224, 90), rgb(197, 204, 60));
+}
+
+#fade { /*--Masque opaque noir de fond--*/
+	display: none; /*--masqué par défaut--*/
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .80;
+	z-index: 9999;
+}
+.popup_block{
+	display: none; /*--masqué par défaut--*/
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ddd;
+	text-align: center;
+	color: #000000;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	/*--Les différentes définitions de Box Shadow en CSS3--*/
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	/*--Coins arrondis en CSS3--*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+img.btn_close {
+	float: right;
+	margin: -55px -55px 0 0;
+}
+/*--Gérer la position fixed pour IE6--*/
+*html #fade {
+position: absolute;
+}
+*html .popup_block {
+position: absolute;
+}
+
+table{
+margin: 0 auto;
+}
+
+#modification{
+	font-size: 18px;
+	font-family: "Times New Roman";
+	margin: 30px;
+}
+
+#modification caption, #modification p{
+	margin-bottom: 10px;
+}
+
+#modification select{
+	margin-top: 0px;
+}
+
+#submit{
+	cursor:  pointer;
+	border:none;
+    text-align:center;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    color:#ffffff;
+    display: inline-block;
+	margin-top: 40px;
+    padding: 8px;
+    width:100px;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(208, 87, 0);
+}
+
+#submit:hover, 
+#submit:focus{
+    background: rgba(208, 87, 0, 0.8);
+    color: #000000;
+}
+		
+		/**************FIN_POPUP*************/
+#information_profil {
+
+	border: 1px dotted #4b4d4c;
+	position: absolute;
+	vertical-align: top;
+	width: 820px;
+	/*height: 290px;*/
+	margin-left: 165px;
+	
+	font-family: "Lucida Handwriting";
+	font-size: 12px;
+	font-weight: lighter;
+	color: #4b4d4c;
+}
+
+
+#information_profil h2 {
+	text-align: left;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+#photo_profil,
+#coordonees{
+	display: inline-block;
+	vertical-align: top;
+	color: #4b4d4c;
+	margin-left: 15px;
+	margin-right: 25px;
+	margin-bottom: 0px;
+	margin-top: 15px;	
+}
+
+#photo_profil{
+	height: 185px;
+	width: 185px;
+	
+	border-right: 8px solid #ffffff;
+	border-left: 8px solid #ffffff;
+	border-top: 8px solid #ffffff;
+	border-bottom: 8px solid #ffffff;
+	
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	-ms-box-shadow: 0 0 5px #888;
+	-o-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+}
+
+#icone_modif{
+	width: 35px;
+	height: 35px;
+}
+
+#titre {
+	margin-left: 165px;
+	margin-top: 40px;
+	font-family: "Lucida Handwriting";
+	font-size: 12px;
+	color: #4b4d4c;
+}
+
+
+
+
+
+
+			/************* FOOTER **************/
+
+#pied_de_page{
+	background: rgb(75,77,76);
+	position: relative;
+	text-align: center;
+    width : 960px;
+	padding-bottom: 20px;
+	list-style: none;
+	margin-top: 0px;
+
+}
+
+#pied_page_haut{
+	padding-top: 20px;
+}
+
+#pied_de_page a{
+	display: inline-block;
+	font-family: "Times New Roman";
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#pied_de_page a:hover,
+#pied_de_page a:active{
+	color: rgb(208, 87, 0);
+}
+
+
